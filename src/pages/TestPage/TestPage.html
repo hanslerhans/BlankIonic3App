@@ -1,0 +1,12 @@
+
+
+<p>This is from service: {{showAltitudeUnit}} !</p>
+
+<button ion-button (click)="onClick1()" >Change to Feet</button>
+<button ion-button (click)="onClick2()" >Change to Meters</button>
+
+
+<boolean-selector [selectorObject] = "showADSB" (onChange) = "anyUIChanged()"></boolean-selector>
+<boolean-selector [selectorObject] = "showFLARM" (onChange) = "anyUIChanged()"></boolean-selector>
+<boolean-selector [selectorObject] = "showACS" (onChange) = "anyUIChanged()"></boolean-selector>
+

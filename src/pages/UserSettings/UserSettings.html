@@ -1,0 +1,29 @@
+
+
+
+
+<p>This is the settings page.</p>
+
+
+<ion-item-group>
+    <ion-item-divider color="light">Units</ion-item-divider>      
+    <single-selector [selectorObject] = "altitude" (onChange) = "anyUIChanged()"></single-selector>
+    <single-selector [selectorObject] = "distance" (onChange) = "anyUIChanged()"></single-selector>        
+</ion-item-group>
+<ion-item-group>
+    <ion-item-divider color="light">Traffic Options</ion-item-divider>
+    <boolean-selector [selectorObject] = "showADSB" (onChange) = "anyUIChanged()"></boolean-selector>
+    <boolean-selector [selectorObject] = "showFLARM" (onChange) = "anyUIChanged()"></boolean-selector>
+    <boolean-selector [selectorObject] = "showACS" (onChange) = "anyUIChanged()"></boolean-selector>
+</ion-item-group>
+
+
+<p>Distance unit: {{distance.selection}}</p>
+<p>Altitude unit: {{altitude.selection}}</p>
+<p>showADSB: {{showADSB.selection}}</p>
+<p>showFLARM: {{showFLARM.selection}}</p>
+<p>showACS: {{showACS.selection}}</p>
+
+
+
+
