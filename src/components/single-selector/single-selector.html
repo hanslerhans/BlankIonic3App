@@ -2,8 +2,7 @@
   <ion-label>{{selectorObject.name}}</ion-label>
   <ion-select 
     [interface] = "selectorObject.ionInterface"
-    [(ngModel)] = "localSelection"
-    [selectedText] = "selectorObject.selection">
+    [(ngModel)] = "localSelection">
     <ion-option *ngFor = "let item of selectorObject.selectables">{{item}}</ion-option>
   </ion-select>
 </ion-item>

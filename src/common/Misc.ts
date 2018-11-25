@@ -31,7 +31,6 @@ export namespace Misc {
             this.name = name;
             this.selectables = selectables;
             this.ionInterface= IonSelectInterface.alert;
-            this.selection = selectables[0];  // initialize to first selectable
         }
 
     }
@@ -42,12 +41,13 @@ export namespace Misc {
 
         constructor(name: string) {
             this.name = name;
-            this.selection = false;
         }
     }
 
 
     export class Settings {
+
+        // following assignments define the default settings
         altitudeUnit: AltitudeUnits = AltitudeUnits.Feet;
         distanceUnit: DistanceUnits = DistanceUnits.Kilometers;
         showADSBtraffic: boolean = true;

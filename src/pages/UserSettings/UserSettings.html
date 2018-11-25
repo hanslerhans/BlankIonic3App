@@ -7,8 +7,8 @@
 
 <ion-item-group>
     <ion-item-divider color="light">Units</ion-item-divider>      
-    <single-selector [selectorObject] = "altitude" (onChange) = "anyUIChanged()"></single-selector>
-    <single-selector [selectorObject] = "distance" (onChange) = "anyUIChanged()"></single-selector>        
+    <single-selector [selectorObject] = "altitude" [selection] = "altitude.selection" (onChange) = "anyUIChanged()"></single-selector>
+    <single-selector [selectorObject] = "distance" [selection] = "distance.selection" (onChange) = "anyUIChanged()"></single-selector>
 </ion-item-group>
 <ion-item-group>
     <ion-item-divider color="light">Traffic Options</ion-item-divider>

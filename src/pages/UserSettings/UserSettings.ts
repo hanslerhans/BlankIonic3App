@@ -24,7 +24,7 @@ export class UserSettings implements OnInit {
 
     // update settings provider if any UI element changes
     anyUIChanged(){
-        //console.log("anyUIChanged!!");
+        //console.log(anyUIChanged!!);
         let actualSettings: msc.Settings = this.settingsPrvd.getSettings();
         actualSettings.altitudeUnit = this.altitude.selection;
         actualSettings.distanceUnit = this.distance.selection;
