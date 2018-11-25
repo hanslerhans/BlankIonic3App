@@ -10,7 +10,8 @@ import { UserSettings } from '../pages/UserSettings/UserSettings';
 import { SettingsProvider } from '../providers/settings/settings';
 import { TestPage } from '../pages/TestPage/TestPage';
 import { SingleSelectorComponent } from "../components/single-selector/single-selector";
-import { BooleanSelectorComponent } from "../components/boolean-selector/boolean-selector"; 
+import { BooleanSelectorComponent } from "../components/boolean-selector/boolean-selector";
+import { NavBarComponent } from "../components/navbar/NavBar";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BooleanSelectorComponent } from "../components/boolean-selector/boolean
     UserSettings,
     TestPage,
     SingleSelectorComponent,
-    BooleanSelectorComponent
+    BooleanSelectorComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +31,13 @@ import { BooleanSelectorComponent } from "../components/boolean-selector/boolean
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    UserSettings,
+    TestPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,    
+    SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SettingsProvider
   ]

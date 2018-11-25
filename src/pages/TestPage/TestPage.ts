@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { SettingsProvider } from "../../providers/settings/settings";
 import { Misc as msc } from "../../common/Misc";
+import { NavController } from "ionic-angular";
+import { UserSettings } from "../UserSettings/UserSettings";
 
 @Component({
     selector: "page-testpage",
@@ -20,7 +22,7 @@ export class TestPage implements OnInit{
     showACS = new msc.BooleanSelector("Show ACS");
 
 
-    constructor(private settingsPrvd: SettingsProvider) {}
+    constructor(private settingsPrvd: SettingsProvider, private navctrl: NavController) {}
 
     // update settings provider on button press
     onClick1() {
@@ -35,6 +37,8 @@ export class TestPage implements OnInit{
         actualSettings.altitudeUnit = msc.AltitudeUnits.Meters;
         this.settingsPrvd.changeSettingsTo(actualSettings);
     };
+
+    goToPage() { this.navctrl.push(UserSettings) };
 
     // update settings provider if any UI element changes
     anyUIChanged(){

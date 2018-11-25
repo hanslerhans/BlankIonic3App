@@ -1,12 +1,19 @@
+<ion-header>
+    <nav-bar title = "Test Page"></nav-bar>
+</ion-header>
+
+<ion-content padding>
+
+    <p>This is from service: {{showAltitudeUnit}} !</p>
+
+    <button ion-button (click) = "onClick1()">Change to Feet</button>
+    <button ion-button (click) = "onClick2()">Change to Meters</button>
+
+    <button ion-button (click) = "goToPage()">go to settings</button>
 
 
-<p>This is from service: {{showAltitudeUnit}} !</p>
+    <boolean-selector [selectorObject] = "showADSB" (onChange) = "anyUIChanged()"></boolean-selector>
+    <boolean-selector [selectorObject] = "showFLARM" (onChange) = "anyUIChanged()"></boolean-selector>
+    <boolean-selector [selectorObject] = "showACS" (onChange) = "anyUIChanged()"></boolean-selector>
 
-<button ion-button (click)="onClick1()" >Change to Feet</button>
-<button ion-button (click)="onClick2()" >Change to Meters</button>
-
-
-<boolean-selector [selectorObject] = "showADSB" (onChange) = "anyUIChanged()"></boolean-selector>
-<boolean-selector [selectorObject] = "showFLARM" (onChange) = "anyUIChanged()"></boolean-selector>
-<boolean-selector [selectorObject] = "showACS" (onChange) = "anyUIChanged()"></boolean-selector>
-
+</ion-content>
