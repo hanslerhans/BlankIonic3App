@@ -19,6 +19,9 @@
         <boolean-selector [selectorObject] = "showACS" (onChange) = "anyUIChanged()"></boolean-selector>
     </ion-item-group>
 
+    <button ion-button (click) = "onTestSave()">Test Save</button>
+    <button ion-button (click) = "onTestGet()">Test Get</button>
+    <button ion-button (click) = "onShowPref()">Test Show</button>
 
     <p>Distance unit: {{distance.selection}}</p>
     <p>Altitude unit: {{altitude.selection}}</p>

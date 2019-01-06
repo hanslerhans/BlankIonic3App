@@ -4,6 +4,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+// ionic native plugins
+import { AppPreferences } from '@ionic-native/app-preferences';
+import { BatteryStatus } from '@ionic-native/battery-status';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UserSettings } from '../pages/UserSettings/UserSettings';
@@ -39,7 +43,9 @@ import { NavBarComponent } from "../components/navbar/NavBar";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SettingsProvider
+    SettingsProvider,
+    AppPreferences,
+    BatteryStatus
   ]
 })
 export class AppModule {}
